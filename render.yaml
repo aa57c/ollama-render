@@ -2,10 +2,9 @@ services:
   - type: web
     name: ollama-server
     env: docker
-    plan: starter
-    region: oregon
+    plan: starter  # or 'free' if you're on the free tier
     dockerfilePath: ./Dockerfile
-    autoDeploy: false
+    autoDeploy: true
     healthCheckPath: /api/tags
     ports:
-      - 11434
+      - port: 80
