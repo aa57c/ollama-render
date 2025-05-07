@@ -10,4 +10,4 @@ RUN apt-get update && \
 EXPOSE 11434
 
 # Start Ollama
-CMD ["ollama", "serve"]
+CMD ["ollama", "serve", "--host", "0.0.0.0"]
